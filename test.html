@@ -1,0 +1,16 @@
+<html>
+ <head>
+ </head>
+ <body>
+  <script src="https://www.espruino.com/js/uart.js"></script>
+  <script>
+  function digitalRead(1) {
+    UART.eval('E.digitalRead(1)', function(t) {
+      document.getElementById("result").innerHTML = t;
+    });
+  }
+  </script>
+  <button onclick="digitalRead(1)">Get ButtonOn</button>
+  <span id="result"></span>
+ </body>
+</html>
